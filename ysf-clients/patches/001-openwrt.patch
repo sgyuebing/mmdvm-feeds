@@ -1,0 +1,24 @@
+--- ysf-clients-1.0.0.orig/Makefile	1970-01-01 08:00:00.000000000 +0800
++++ ysf-clients-1.0.0/Makefile	2017-09-20 18:08:27.000000000 +0800
+@@ -0,0 +1,21 @@
++.ysf-gateway:
++	make -C ysfGateway
++
++.ysf-parrot:
++	make -C ysfParrot
++
++.ysf-reflector:
++	make -C ysfReflector
++
++all: .ysf-gateway .ysf-parrot .ysf-reflector
++
++clean:
++	make -C ysfGateway clean
++	make -C ysfParrot clean
++	make -C ysfReflector clean
++
++distclean:
++	make -C ysfGateway distclean
++	make -C ysfParrot distclean
++	make -C ysfReflector distclean
++
